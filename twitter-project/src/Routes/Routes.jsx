@@ -9,7 +9,7 @@ import {Navbar} from '../Pages/Navbar'
 const Routes = () => {
     return (
         <div>
-            <Route path="/" exact render={()=> <Navbar/>} />
+            <Route path="/"  render={()=> <Navbar/>} />
             <Switch>
                 <Route path="/" exact render={()=> <Tweets/>} />
                 <Route path="/with_replies" exact render={()=> <Replies/>} />

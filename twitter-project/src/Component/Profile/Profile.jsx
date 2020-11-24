@@ -8,15 +8,15 @@ class Profile extends Component {
         const data = users.users[0].user1[0]
         console.log(users.users[0])
         return (
-        <div>
-            <div className={styles.profileImg} >
+        <div style={{padding: 10}} >
+            <div >
                 <img src={data.backgroundimgURL} width="100%" height="200px" alt="background_image" />
             </div>
             <div className={styles.profile}>
                 <img src={data.imageURL} width="150px" alt="profile" style={{borderRadius:"75px"}}/>
             </div>
             <h2>{data.name} </h2>
-            <p>{data.email} </p>
+            <p className={styles.email} >{data.email} </p>
             <div>{data.bio} </div>
             <div className={styles.location} >
                 <div>{data.location} </div>

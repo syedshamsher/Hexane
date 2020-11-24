@@ -3,21 +3,29 @@ import { NavLink } from 'react-router-dom';
 
 const links=[
     {
-        to:"/",
-        title:"Tweets"
+        to:"/explore/tabs/for-you",
+        title:"For you"
     },
     
     {
-        to:"/with_replies",
-        title:"Tweets & replies"
+        to:"/explore/tabs/covid-19",
+        title:"COVID-19"
     },
     {
-        to:"/media",
-        title:"Media"
+        to:"/explore/tabs/trending",
+        title:"Trending"
     },
     {
-        to:"/likes",
-        title:"Likes"
+        to:"/explore/tabs/news",
+        title:"News"
+    },
+    {
+        to:"/explore/tabs/sports",
+        title:"Sports"
+    },
+    {
+        to:"/explore/tabs/entertainment",
+        title:"Entertainment"
     }
 ]
 
@@ -27,7 +35,7 @@ class Navbar extends Component {
             <div>
                 {links.map((link)=>(
                     <NavLink style={{padding:10}}
-                    activeStyle={{fontWeight:"bold",color:"red"}}
+                    activeStyle={{fontWeight:"bold",color:"blue"}}
                     key={link.to}
                     exact
                     to={link.to}>{link.title}</NavLink>
