@@ -1,0 +1,56 @@
+{
+    "users": [
+        { 
+            "user1":[
+                {
+                    "id":1,
+                    "name":"Jigyasa Kaushik",
+                    "imageURL" : "https://pbs.twimg.com/profile_images/1305027965336481792/5hM-TGKx_400x400.jpg",
+                    "backgroundimgURL" : "https://pbs.twimg.com/profile_banners/1305027261142245378/1606112476/1500x500",
+                    "email":"jigyasa@gmail.com",
+                    "password" : "jigyasa123",
+                    "bio": "Aspiring Full Stack Web Developer Learning MERN Stack, Data Structures and Algorithms at @masaischool",
+                    "location" : "Delhi",
+                    "joined" : "September 2020",
+                    "following" : 0,
+                    "followers" : 0,
+                    "tweets" : ["Hello World!", "I am a programmer"],
+                    "likes" : 0
+                },
+                {
+                    "id":2,
+                    "name":"Aloknath Sah",
+                    "imageURL" : "https://pbs.twimg.com/profile_images/1254757243485995008/SqXGMB8r_400x400.jpg",
+                    "backgroundimgURL" : "https://pbs.twimg.com/profile_banners/1305027261142245378/1606112476/1500x500",
+                    "email":"aloknath@gmail.com",
+                    "password" : "aloknath123",
+                    "bio": "Aspiring Full Stack Web Developer Learning MERN Stack, Data Structures and Algorithms at @masaischool",
+                    "location" : "Bihar",
+                    "joined" : "January 2020",
+                    "following" : 0,
+                    "followers" : 0,
+                    "tweets" : ["Hello Universe!", "I am a Developer"],
+                    "likes" : 0
+                },
+                {
+                    "id":3,
+                    "name":"Shamsher Ali",
+                    "imageURL" : "https://pbs.twimg.com/profile_images/1305027965336481792/5hM-TGKx_400x400.jpg",
+                    "backgroundimgURL" : "https://pbs.twimg.com/profile_banners/1305027261142245378/1606112476/1500x500",
+                    "email":"shamsher@gmail.com",
+                    "password" : "shamsher123",
+                    "bio": "Aspiring Full Stack Web Developer Learning MERN Stack, Data Structures and Algorithms at @masaischool",
+                    "location" : "Kolkata",
+                    "joined" : "September 2020",
+                    "following" : 0,
+                    "followers" : 0,
+                    "tweets" : ["Hello Developers!", "I am a Web Developer"],
+                    "likes" : 0
+                }
+            ]
+        
+        }
+        
+    ]
+    
+}

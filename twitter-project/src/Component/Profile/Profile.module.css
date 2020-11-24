@@ -1,0 +1,13 @@
+.profile{
+    margin-top: -70px;
+    margin-left: 10px;
+
+}
+
+.location{
+    display: flex;
+}
+
+.location > * {
+    margin: 5px;
+}
