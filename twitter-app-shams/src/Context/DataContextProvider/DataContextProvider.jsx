@@ -39,25 +39,26 @@ class DataContextProvider extends Component {
   // function which takes in email and password from login component and autheticates user
   authenticateUser({ email, password }) {
     this.setState({ isLoading: true })
-    const { users, activeUser } = this.state
-    users.map(( item ) => { 
-        if(item.email === email && item.password === password)  {
-            const data = item
-            console.log( data )
-            this.setState({
+    const { users, activeUser, isAuth } = this.state
+      for( var i = 0; i < users.length; i++) {
+          if( users[i].email === email && users[i].password === password ){
+              this.setState({
                 isAuth: true,
-                activeUser: data,
-                isLoading: false,
-            })
-        } else {
-
-            this.setState({
-                isAuth: false,
-                error: true,
+                activeUser: users[i],
+                error: false,
                 isLoading: false
+              })
+              break
+          } else {
+            this.setState({
+              isAuth: false,
+              activeUser: [],
+              error: true,
+              isLoading: false
             })
-        }
-    })
+          }
+      }
+      return { isAuth, activeUser, users }
   }
 
   // function which gets the details of active user available in state(activeUser) of context provider
