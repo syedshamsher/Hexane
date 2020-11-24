@@ -10,7 +10,7 @@ function App() {
       {/* <Profile/>
       <Component3/> */}
 
-      <Explore/>
+      {/* <Explore/> */}
     </div>
   );
 }

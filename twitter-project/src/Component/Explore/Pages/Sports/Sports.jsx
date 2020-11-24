@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import styles from '../../../Component3/Component.module.css'
-import trending from './trending.json'
+import sports from './sports.json'
 
-class Trending extends Component {
+class Sports extends Component {
 
     render() {
         
         return (
         <div>
-            {trending.map((item)=> (
+            {sports.map((item)=> (
                 <div className={styles.covid} >
                     <div>
                         <div>{item.smallheading} </div>
@@ -22,4 +22,4 @@ class Trending extends Component {
     }
 }
 
-export {Trending}
+export {Sports}
