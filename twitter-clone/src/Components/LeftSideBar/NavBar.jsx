@@ -6,6 +6,7 @@ import { BiHomeCircle, BiHash, BiBell } from "react-icons/bi";
 import { MdMailOutline, MdBookmarkBorder } from "react-icons/md";
 import { FaUserCircle, FaEllipsisH } from "react-icons/fa";
 import { BsCardText } from "react-icons/bs";
+// import { TweetButton } from "./TweetButton";
 function Navbar() {
   return (
     <div className={styles.box}>
@@ -64,9 +65,7 @@ function Navbar() {
             <FaEllipsisH color="#1DA1F2" fontSize="2rem" />
             <div>More</div>
           </div>
-          <div>
-            <button className={styles.btn}>Tweet</button>
-          </div>
+          <div>{/* <TweetButton /> */}</div>
         </div>
       </div>
     </div>

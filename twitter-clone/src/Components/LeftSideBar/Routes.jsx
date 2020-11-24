@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./NavBar";
 import { Route, Switch } from "react-router-dom";
 import { Home } from "../../Pages/Home";
+import { Lists } from "../../Pages/Lists";
 function Routes() {
   return (
     <div>
@@ -10,6 +11,7 @@ function Routes() {
       </div>
       <div style={{ float: "left" }}>
         <Route path="/home" component={Home} />
+        <Route path="/lists" component={Lists} />
       </div>
       {/* <Route path="/products" component={Explore} />
       <Route path="/contact" exact component={Notifications} />
