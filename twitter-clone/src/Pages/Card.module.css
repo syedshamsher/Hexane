@@ -1,0 +1,16 @@
+.box {
+  border: 1px solid black;
+  width: 600px;
+  height: 900px;
+  margin-left: 400px;
+  background: black;
+}
+.card {
+  margin: center;
+  text-align: center;
+  border: 1px solid black;
+  /* border-radius: 5px; */
+}
+.name {
+  text-align: center;
+}
