@@ -1,0 +1,23 @@
+.flex{
+    display: flex;
+}
+
+.card{
+    width: 300px;
+    border: 1px solid grey;
+    height: 90px;
+}
+
+.card > * {
+    padding: 5px;
+}
+
+.flex {
+    flex: 1;
+}
+
+.covid{
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+}

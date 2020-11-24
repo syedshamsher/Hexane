@@ -1,0 +1,56 @@
+.option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.twitterLogo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var( --twitter-color );
+    padding: 15px 15px 0px;
+    font-size: 20px;
+}
+
+
+.option:hover {
+    background-color: #e8f5fe;
+    border-radius: 30px;
+    color: var( --twitter-color );
+    transition: color 100ms ease-out;
+}
+
+.option > svg {
+    padding: 15px;
+    font: size 20px;
+}
+
+.option > h2 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 15px;
+
+}
+
+.option--active {
+    color: var( --twitter-color );
+}
+
+.btn__sidebar {
+    background: var( --twitter-color ) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    border-radius: 30px !important;
+    height: 40px !important;
+    margin-top: 20px !important;
+}
+
+.sidebar {
+    border-right: 1px solid var(--twitter-background);
+    min-width: 250px;
+    flex: 0.3;
+}
