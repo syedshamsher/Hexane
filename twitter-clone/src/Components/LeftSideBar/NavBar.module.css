@@ -52,8 +52,17 @@ body {
   font-size: 1.3rem;
   font-weight: 600;
   color: #1da1f2;
+  /* text-decoration: none; */
   /* margin-right: 20px; */
   /* padding: 10px; */
+}
+.navlink {
+  color: #1da1f2;
+  text-decoration: none;
+  margin: 0 12px;
+}
+.navlink :hover {
+  color: red;
 }
 .icons > div {
   margin: 0 12px;
@@ -68,7 +77,8 @@ body {
   padding: 6px 12px;
   border: none;
   border-radius: 25px;
-  font-weight: 1rem;
+  font-weight: 700;
+  height: 40px;
 }
 
 /* .sidebarOption {

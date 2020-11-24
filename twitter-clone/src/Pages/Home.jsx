@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import data from "./db.json";
+import data from "../db.json";
 import Card from "./Card";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data
+      data,
     };
   }
   render() {
@@ -17,7 +17,7 @@ class Home extends Component {
         style={{
           width: "600px",
           // height: "800px",
-          border: "1px solid black"
+          border: "1px solid grey",
         }}
       >
         {data.users.map((item) => (
