@@ -7,6 +7,7 @@ import { MdMailOutline, MdBookmarkBorder } from "react-icons/md";
 import { FaUserCircle, FaEllipsisH } from "react-icons/fa";
 import { BsCardText } from "react-icons/bs";
 import { TweetButton } from "./TweetButton";
+// import "../../Options.css";
 function Navbar() {
   return (
     <div className={styles.box}>
@@ -19,45 +20,43 @@ function Navbar() {
           </div>
 
           <div className={styles.icons}>
-            <BiHomeCircle color="#1DA1F2" fontSize="2rem" />
             <NavLink to="/home" className={styles.navlink}>
-              {" "}
-              Home
+              <BiHomeCircle color="#1DA1F2" fontSize="2rem" /> Home
             </NavLink>
           </div>
           <div className={styles.icons}>
-            <BiHash color="#1DA1F2" fontSize="2rem" />
             <NavLink to="/explore" className={styles.navlink}>
+              <BiHash color="#1DA1F2" fontSize="2rem" />
               Explore
             </NavLink>
           </div>
           <div className={styles.icons}>
-            <BiBell color="#1DA1F2" fontSize="2rem" />
             <NavLink to="/notifications" className={styles.navlink}>
+              <BiBell color="#1DA1F2" fontSize="2rem" />
               Notifications
             </NavLink>
           </div>
           <div className={styles.icons}>
-            <MdMailOutline color="#1DA1F2" fontSize="2rem" />
             <NavLink to="/messages" className={styles.navlink}>
+              <MdMailOutline color="#1DA1F2" fontSize="2rem" />
               Messages
             </NavLink>
           </div>
           <div className={styles.icons}>
-            <MdBookmarkBorder color="#1DA1F2" fontSize="2rem" />
             <NavLink to="/bookmarks" className={styles.navlink}>
+              <MdBookmarkBorder color="#1DA1F2" fontSize="2rem" />
               Bookmarks
             </NavLink>
           </div>
           <div className={styles.icons}>
-            <BsCardText color="#1DA1F2" fontSize="2rem" />
             <NavLink to="/lists" className={styles.navlink}>
+              <BsCardText color="#1DA1F2" fontSize="2rem" />
               Lists
             </NavLink>
           </div>
           <div className={styles.icons}>
-            <FaUserCircle color="#1DA1F2" fontSize="2rem" />
             <NavLink to="/profile" className={styles.navlink}>
+              <FaUserCircle color="#1DA1F2" fontSize="2rem" />
               Profile
             </NavLink>
           </div>
