@@ -11,7 +11,7 @@
     cursor: pointer;
     color: var( --twitter-color );
     padding: 15px 15px 0px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 
@@ -24,12 +24,12 @@
 
 .option > svg {
     padding: 15px;
-    font: size 20px;
+    font-size: 20px;
 }
 
 .option > h2 {
     font-weight: 800;
-    font-size: 20px;
+    font-size: 15px;
     margin-right: 15px;
 
 }
@@ -46,11 +46,11 @@
     text-transform: inherit !important;
     border-radius: 30px !important;
     height: 40px !important;
-    margin-top: 20px !important;
+    margin-top: 10px !important;
 }
 
 .sidebar {
     border-right: 1px solid var(--twitter-background);
-    min-width: 250px;
+    max-width: 200px;
     flex: 0.3;
 }

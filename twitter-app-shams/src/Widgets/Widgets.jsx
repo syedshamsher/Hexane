@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import styles from './Widgets.module.css'
+import "./Widgets.css";
+import {TwitterTimelineEmbed,TwitterShareButton,TwitterTweetEmbed,} from "react-twitter-embed";
+import SearchIcon from "@material-ui/icons/Search";
 
 class Widgets extends Component {
     constructor(props){
@@ -12,39 +13,37 @@ class Widgets extends Component {
     render() {
 
         return (
-        <div>
-            <input/>
-            <h2>What's happening</h2>
-            <div className={styles.card}>
-                <div>COVID-19 .LIVE </div>
-                <div className={styles.flex}>
-                    <div>COVID-19 in India</div>
-                    <img style={{float: "right"}} src="https://pbs.twimg.com/semantic_core_img/1255575536824233984/CiLy4der?format=jpg&name=240x240" width="60px"/>
+            <div className="widgets">
+                <div className="stick">
+                    <div className="widgets__input">
+                        <SearchIcon className="widgets__searchIcon" />
+                        <input placeholder="Search Twitter" type="text" />
+                    </div>
                 </div>
-                
+
+        
+              <div className="widgets__widgetContainer">
+                <h2>What's happening</h2>
+        
+                <TwitterTweetEmbed tweetId={"858551177767687"} />
+
+                <div className="twitter_tweet">
+                 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">2 hours flew by &amp; he talked about how he had been at a hospital in Paris &amp; he asked about our daughter.Before he got off he signed our champagne bottle box &amp; wished us a happy anniversary~Roxanne King when she &amp; her husband met <a href="https://twitter.com/hashtag/JohnnyDepp?src=hash&amp;ref_src=twsrc%5Etfw">#JohnnyDepp</a> on the way back from Paris-Eurostar 2019 <a href="https://t.co/ZdlKFp2pnT">pic.twitter.com/ZdlKFp2pnT</a></p>&mdash; Savvy? 🏴‍☠️ (@Savvy_CapJackie) <a href="https://twitter.com/Savvy_CapJackie/status/1331251994334523393?ref_src=twsrc%5Etfw">November 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+        
+                <TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="syedshamsher12"
+                  options={{ height: 400 }}
+                />
+                <TwitterTimelineEmbed
+                  sourceType="profile"
+                  screenName="dan_abramov"
+                  options={{ height: 400 }}
+                />
+              </div>
             </div>
-            <div className={styles.card}>
-                <div>K-pop .Trending </div>
-                <div>JUNG HOSEOK</div>
-                <div>38.1k Tweets</div>
-            </div>
-            <div className={styles.card}>
-                <div>Sports .Trending </div>
-                <div>Iyer</div>
-                <div>2,399 Tweets</div>
-            </div>
-            <div className={styles.card}>
-                <div>Entertainment .Live </div>
-                <div>Big Boss season 14: Here's the latest from the house</div>
-                
-            </div>
-            <div className={styles.card}>
-                <div>Indian Premier League </div>
-                <div>Big Boss season 14: Here's the latest from the house</div>
-                
-            </div>
-        </div>
-        );
+          );
     }
 }
 

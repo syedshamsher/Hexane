@@ -22,7 +22,7 @@ class DataContextProvider extends Component {
   // makes axios call and update local state (users) of the component with users database
   componentDidMount() {
     axios
-      .get(`http://localhost:5000/users`)
+      .get(`http://localhost:3004/users`)
       .then((res) => {
         this.setState({
           users: [...res.data],
