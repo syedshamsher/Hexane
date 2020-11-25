@@ -2,8 +2,9 @@
     flex: 0.3;
     overflow-y: scroll;
     width: 500px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    position: sticky;
+    /* -ms-overflow-style: none;
+    scrollbar-width: none; */
   }
   
 

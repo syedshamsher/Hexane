@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "../Options.css"
-import {Link, Switch, Route } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { HomeOption } from "../HomeOption"
 import { ExploreOption } from "../ExploreOption"
 import { NotificationOption } from "../NotificationOption"
@@ -26,17 +26,17 @@ class Sidebar extends Component {
         return (
             <div className="sidebar">
               {/* Twitter icon */}
-              <FaTwitter className= "twitterLogo" />
-
+              <NavLink to="/home" exact ><FaTwitter className= "twitterLogo" /></NavLink>
               {/*  SidebarOption Components*/}
-              <HomeOption active Icon={ BiHomeCircle } text="Home" />
-              <ExploreOption Icon={ BiHash } text="Explore" />
-              <NotificationOption Icon={ IoIosNotificationsOutline } text="Notification" />
-              <MessageOption Icon={ FiMail } text="Message" />
-              <BookmarkOption Icon={ BsBookmark } text="Bookmark" />
-              <ListOption Icon={ RiFileList2Line } text="Lists" />
-              <ProfileOption Icon={ FaRegUser } text="Profile" />
-              <MoreOption Icon={ CgMoreO } text="More" />
+              <NavLink to="/home" exact > <HomeOption active Icon={ BiHomeCircle } text="Home" /> </NavLink>
+              <NavLink to="/explore" exact > <ExploreOption Icon={ BiHash } text="Explore" /> </NavLink>
+              <NavLink to="/notifications" exact > <NotificationOption Icon={ IoIosNotificationsOutline } text="Notification" /> </NavLink>
+              <NavLink to="/messages" exact > <MessageOption Icon={ FiMail } text="Message" /> </NavLink>
+              <NavLink to="/bookmarks" exact > <BookmarkOption Icon={ BsBookmark } text="Bookmark" /> </NavLink>
+              <NavLink to="/lists" exact > <ListOption Icon={ RiFileList2Line } text="Lists" /> </NavLink>
+              <NavLink to="/profile" exact > <ProfileOption Icon={ FaRegUser } text="Profile" /> </NavLink>
+              <NavLink to="/more" exact > <MoreOption Icon={ CgMoreO } text="More" /> </NavLink>
+              
 
               {/* Button for tweet */}
               <Button variant="outlined" className="btn__sidebar" fullWidth >Tweet</Button>

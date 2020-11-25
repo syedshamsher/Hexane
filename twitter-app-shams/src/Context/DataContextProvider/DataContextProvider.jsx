@@ -69,6 +69,7 @@ class DataContextProvider extends Component {
 
   render() {
     const { isAuth, isLoading, error, activeUser, users } = this.state
+    console.log( activeUser )
     const { authenticateUser, getActiveUserData } = this
     const value = {
       activeUser,

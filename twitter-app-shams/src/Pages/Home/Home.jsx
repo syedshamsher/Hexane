@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
+import { Route } from "react-router-dom"
 import { Sidebar } from "../../Sidebar"
 import { Feeds } from "../../Feeds"
 import { Widgets } from "../../Widgets"
@@ -27,7 +28,7 @@ class Home extends Component {
 
 
   render() {
-    const { activeUser } = this.context 
+    const { activeUser } = this.context
     const { details } = this.state
     console.log( details )
     return (
