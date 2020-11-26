@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import { PrivateRoute } from "../../src/Components/PrivateRoute";
 import { LoginPage } from "../Pages/LoginPage";
 import { Log } from "../Pages/Log"
 import { Home } from "../Pages/Home"
@@ -18,23 +19,23 @@ import { Explore } from "../Pages/Explore";
 function Routes() {
   return (
     <>
-    <Route path="/" exact render={(props) => <LoginPage {...props}/>} />
-      <Switch>
+      <Route path="/" exact render={(props) => <LoginPage {...props}/>} />
         <Route path="/login" exact render={( props ) => <Log {...props} /> } />
-        {/* <Route path="/home" render =  {() =>  <Home/>} /> */}
-        <div className="control">
-            <Sidebar/>
-              <Route path="/home" exact component={ Feeds }/>
-              <Route path="/explore" exact component={ Explore }/>
-              <Route path="/messages" exact component={ Feeds}/>
-              <Route path="/notifications" exact component={ Explore }/>
-              <Route path="/bookmarks" exact component={ Feeds }/>
-              <Route path="/lists" exact component={ Explore }/>
-              <Route path="/profile" exact component={ Feeds }/>
-              <Route path="/more" exact component={ Explore }/>
+        
+          <PrivateRoute>
+          <div className="control">
+          <Sidebar/>
+                      <Route path="/home" exact component={ Feeds }/>
+                      <Route path="/explore" exact component={ Explore }/>
+                      <Route path="/messages" exact component={ Feeds}/>
+                      <Route path="/notifications" exact component={ Explore }/>
+                      <Route path="/bookmarks" exact component={ Feeds }/>
+                      <Route path="/lists" exact component={ Explore }/>
+                      <Route path="/profile" exact component={ Feeds }/>
+                      <Route path="/more" exact component={ Explore }/>
             <Widgets/>
-        </div>
-      </Switch>
+          </div>
+          </PrivateRoute>
     </>
   );
 }
