@@ -7,8 +7,7 @@ class ForYou extends Component {
     render() {
         
         return (
-        <div>
-            <h1>hello</h1>
+        <div style={{width: "700px"}} >
             <div className={styles.container}>
                 <img src="https://pbs.twimg.com/semantic_core_img/1255575536824233984/CiLy4der?format=jpg&name=240x240" alt="covidimage" width="100%" height="300px" />
                 <div className={styles.bottom_left}>

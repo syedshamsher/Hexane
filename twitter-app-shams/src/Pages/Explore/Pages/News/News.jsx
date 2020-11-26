@@ -18,7 +18,7 @@ class News extends Component {
             <YouTubePlayer
             url='https://www.youtube.com/watch?v=MkwLgT3PYos&ab_channel=HindustanTimes'
             /> */}
-                <img src="https://pbs.twimg.com/semantic_core_img/1256316756236177408/uhT6hUns?format=jpg&name=small" alt="covidimage" width="100%" height="300px" />
+                <img src="https://pbs.twimg.com/media/EnpyuECUUAIFXr9?format=jpg&name=small" alt="covidimage" width="100%" height="300px" />
                 <div className={styles.bottom_left}>
                     <div style={{marginRight: "150px", marginBottom: "-20px"}}>COVID-19 .LIVE</div>
                     <h1>COVID-19 in India</h1>
