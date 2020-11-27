@@ -48,7 +48,6 @@ class Sidebar extends Component {
               <NavLink to="/profile" exact style={{ textDecoration: "none", color: "black"}} activeStyle = {{}} > <ProfileOption Icon={ FaRegUser } text="Profile" /> </NavLink>
               <NavLink to="/more" exact style={{ textDecoration: "none", color: "black"}} activeStyle = {{}} > <MoreOption Icon={ CgMoreO } text="More" /> </NavLink>
               
-
               {/* Button for tweet */}
               <Button variant="outlined" className="btn__sidebar" fullWidth >Tweet</Button>
 

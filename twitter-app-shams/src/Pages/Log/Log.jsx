@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
+// import styled from "styled-components";
 import { DataContext } from "../../Context/DataContextProvider";
-import "./Log.css";
+import styles from "./Log.module.css";
 import { AiOutlineTwitter } from "react-icons/ai";
 export class Log extends Component {
   constructor(props) {
@@ -9,7 +10,6 @@ export class Log extends Component {
     this.state = {
       email: "",
       password: "",
-      user: []
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,7 +20,6 @@ export class Log extends Component {
       [name]: value,
     });
   }
-
   handleSubmit(e) {
     e.preventDefault();
     const { email, password } = this.state;
@@ -28,20 +27,19 @@ export class Log extends Component {
     const { authenticateUser } = this.context;
     authenticateUser({ email, password });
   }
-
   render() {
     const { isLoading, error, isAuth } = this.context;
     const { email, password } = this.state;
     return isLoading ? (
       <h1 style={{ textAlign: "center" }}>Loading...</h1>
     ) : !isAuth ? (
-      <div className="body">
+      <div className={styles.main}>
         <form onSubmit={this.handleSubmit}>
           <AiOutlineTwitter color="#1DA1F2" fontSize="2.8rem" />
           <h2>Log in to Twitter</h2>
           <div>
             <input
-              className="inputBox"
+              className={styles.inputBox}
               type="text"
               placeholder="Phone, email, or username"
               name="email"
@@ -49,10 +47,9 @@ export class Log extends Component {
               onChange={this.handleChange}
             />
           </div>
-​
           <div>
             <input
-              className="inputBox"
+              className={styles.inputBox}
               type="password"
               name="password"
               placeholder="Password"
@@ -60,20 +57,18 @@ export class Log extends Component {
               onChange={this.handleChange}
             />
           </div>
-​
-          <button className="btn" type="submit" value="submit">
+          <button className={styles.btn} type="submit" value="submit">
             Log in
           </button>
-          <div className="footer">
+          <div className={styles.footer}>
             <a href="#">Forgot password?</a>.<a href="#">Sign up for Twitter</a>
           </div>
         </form>
-        {error && <h3>something went wrong</h3>}
+        {error && <h3>Wrong email Or Password</h3>}
       </div>
     ) : (
       <Redirect to="/home" />
     );
   }
 }
-
 Log.contextType = DataContext;

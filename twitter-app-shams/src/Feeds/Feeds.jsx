@@ -2,10 +2,12 @@ import React from 'react'
 import "./Feed.css"
 import "./Tweetbox.css"
 import { Avatar, Button } from "@material-ui/core"
-import { Tweetbox } from "../Tweetbox"
 import { DataContext } from "../Context/DataContextProvider";
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ChatBubbleIcon from '@material-ui/icons/ChatBubble'
+import ShareIcon from '@material-ui/icons/Share';
+import SendIcon from '@material-ui/icons/Send';
 
-  
 
 class Feeds extends React.Component {
       constructor(props) {
@@ -16,6 +18,7 @@ class Feeds extends React.Component {
            newTweet: [],
            message: "",
            tweeted: false,
+           red: false
         }
         this.handleChange = this.handleChange.bind( this)
         this.handleSubmit = this.handleSubmit.bind( this)
@@ -34,7 +37,6 @@ class Feeds extends React.Component {
         const { name, value } = e.target;
         this.setState({
           [name]: value,
-          tweeted: false
         });
       }
     
@@ -46,11 +48,16 @@ class Feeds extends React.Component {
             tweeted: true
         })
     }
+
+    changeColor(){
+      this.setState({red: !this.state.red})
+   }
    
     
    render() {
-     const{ user, allUser, message, newTweet, tweeted } = this.state
-     console.log( user, allUser, newTweet, tweeted )
+     const{ user, allUser, message, newTweet, tweeted, flag, col } = this.state
+     console.log( user, allUser, newTweet, tweeted, col, flag )
+     let btn_class = this.state.red ? "redButton" : "whiteButton";
     return (
       <div className="feed">
           {/* header */}
@@ -61,7 +68,7 @@ class Feeds extends React.Component {
           <div className="tweetBox">
                 <form onSubmit = { this.handleSubmit } >
                     <div className="tweetBox__input">
-                        <Avatar src="" />
+                        <Avatar src={user.imageURL} style={{ margin: "10px"}} />
                         <input type="text" name="message" value={message} onChange= {this.handleChange}   placeholder="What's happening?" />
                     </div>
                     <input type="submit" name="submit" value="Tweet" className="tweetBox__tweetButton" />
@@ -76,15 +83,29 @@ class Feeds extends React.Component {
                  tweeted ? 
 
                  <div>
-                       <div style={{display: "flex"}}>
-                                  <h3> {user.name} </h3>
-                                  <h4> {user.username} </h4>
-                        </div>
                                 <div>
                                   {
                                     newTweet.map((item => {
                                       return(
-                                        <p> {item.message} </p>
+                                        <div className = "tweet_wrapper">
+                                            <div style={{display: "flex"}}>
+                                                <div style={{ margin: 10}}>
+                                                <Avatar src={user.imageURL} />
+                                                </div>
+                                                <h4 className="name"> {user.name} </h4>
+                                                <p className="username"> {user.username} </p>
+                                            </div>
+                                            <div>
+                                              <p className = "tweets"> {item.message} </p>
+                                            </div>
+                                            
+                                            <div className="icons">
+                                              <ChatBubbleIcon style={{color: "grey" }}/>
+                                              <SendIcon style={{color: "grey" }}/>
+                                              <FavoriteIcon className={btn_class} onClick={this.changeColor.bind(this)}/>
+                                              <ShareIcon style={{color: "grey" }}/>
+                                            </div>
+                                        </div>
                                       )
                                     }))
                                   }
@@ -99,22 +120,36 @@ class Feeds extends React.Component {
                } 
 
                {
+              
                  
                 allUser.map( (item) =>  {
                   return(
                     <div>
                         {
-                          item.tweets.map(( tweets ) => {
+                          item.tweets.map(( tweet ) => {
                             return(
-                              <>
+                              <div className = "tweet_wrapper">
                                 <div style={{display: "flex"}}>
-                                  <h3> {item.name} </h3>
-                                  <h4> {item.username} </h4>
+                                <div style={{ margin: 10}}>
+                                  <Avatar src={item.imageURL} />
+                                </div>
+                                  <h4 className="name"> {item.name} </h4>
+                                  <p className="username"> {item.username} </p>
                                 </div>
                                 <div>
-                                  <p> {tweets} </p>
+                                  <p className = "tweets"> {tweet.title} </p>
                                 </div>
-                              </>
+                                <div style={{ display: "flex", justifyContent: "center"}}>
+                                  <img className="posted_img" src={tweet.img} alt="posted-img"/>
+                                </div>
+                                
+                                <div className="icons">
+                                  <ChatBubbleIcon style={{color: "grey" }}/>
+                                  <SendIcon style={{color: "grey" }}/>
+                                  <FavoriteIcon className={btn_class} onClick={this.changeColor.bind(this)}/>
+                                  <ShareIcon style={{color: "grey" }}/>
+                                </div>
+                              </div>
                             )
                           })
                         }

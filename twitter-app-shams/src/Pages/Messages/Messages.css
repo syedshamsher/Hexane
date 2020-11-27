@@ -1,11 +1,11 @@
-.feed {
+.messages {
     flex: 0.5;
     border-right:1px solid var( --twitter-background );
     min-width: fit-content;
     overflow-y: scroll;
 }
 
-.feed__header {
+.messages__header {
     position: sticky;
     top: 0;
     background-color: white;
@@ -14,17 +14,17 @@
     padding: 0px 10px;
 }
 
-.feed__header > h2 {
+.messages__header > h2 {
     font-size: 20px;
     font-weight: 800;
     
 }
 
-.feed::-webkit-scrollbar {
+.messages::-webkit-scrollbar {
     display: none;
 }
 
-.feed {
+.messages {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -36,12 +36,10 @@
 }
 
 .name {
-    padding-top: 10px;
     margin: 5px;
 }
 
 .username {
-    padding-top: 10px;
     margin: 5px;
     color: rgb(194, 191, 191);
 }
@@ -53,21 +51,4 @@
 .posted_img {
     width: 500px;
     height: 400px;
-}
-
-.redButton {
-    color: red;
-}
-
-.whiteButton {
-    color: grey;
-}
-
-.icons {
-    margin: 10px;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    border-top: 0.5px solid var(--twitter-background);
 }
