@@ -17,8 +17,7 @@
           "Hello World!",
           "I am a programmer"
         ],
-        "likes": 0,
-        "username": "@jigyasa"
+        "likes": 0
       },
       {
         "id": 2,
@@ -36,8 +35,7 @@
           "Hello Universe!",
           "I am a Developer"
         ],
-        "likes": 0,
-        "username": "@aloknath"
+        "likes": 0
       },
       {
         "id": 3,
@@ -55,8 +53,7 @@
           "Hello Developers!",
           "I am a Web Developer"
         ],
-        "likes": 0,
-        "username": "@shamsher"
+        "likes": 0
       }
     ]
   }

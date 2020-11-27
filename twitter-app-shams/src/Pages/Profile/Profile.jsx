@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Lists = () => {
+const Profile = () => {
     return (
         <div>
-        <h1>This is Lists page</h1>
+        <h1>This is Profile page</h1>
         </div>
     );
 }
 
-export {Lists}
+export {Profile}

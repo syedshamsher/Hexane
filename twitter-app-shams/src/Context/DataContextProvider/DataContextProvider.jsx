@@ -15,8 +15,8 @@ class DataContextProvider extends Component {
     }
     this.authenticateUser = this.authenticateUser.bind(this)
     this.getActiveUserData = this.getActiveUserData.bind(this)
-    this.getData = this.getData.bind(this)
-
+    // this.getProductById = this.getProductById.bind(this)
+    // this.addProduct = this.addProduct.bind(this)
   }
 
   // makes axios call and update local state (users) of the component with users database
@@ -35,24 +35,6 @@ class DataContextProvider extends Component {
         })
       })
   }
-
-  getData() {
-    axios
-      .get(`http://localhost:3004/users`)
-      .then((res) => {
-        this.setState({
-          users: [...res.data],
-        })
-      })
-      .catch((err) => {
-        this.setState({
-          error: true,
- 
-        })
-      })
-  }
-
-
 
   // function which takes in email and password from login component and autheticates user
   authenticateUser({ email, password }) {
@@ -87,10 +69,10 @@ class DataContextProvider extends Component {
 
   render() {
     const { isAuth, isLoading, error, activeUser, users } = this.state
-    const { authenticateUser, getActiveUserData, getData } = this
+    console.log( activeUser )
+    const { authenticateUser, getActiveUserData } = this
     const value = {
       activeUser,
-      getData,
       users,
       authenticateUser,
       getActiveUserData,
