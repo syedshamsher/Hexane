@@ -16,12 +16,7 @@ const ExploreRoutes = () => {
             </div>
             
             <Switch>
-                {/* <Route path="/explore/for-you" exact render={()=> <d></d>} /> */}
-                {/* <Route path="/explore/covid-19" exact render={()=> <COVID_19/>} /> */}
-                {/* <Route path="/explore/trending" exact render={()=> <Trending/>} />
-                <Route path="/explore/news" exact render={()=> <News/>} />
-                <Route path="/explore/sports" exact render={()=> <Sports/>} />
-                <Route path="/explore/entertainment" exact render={()=> <Entertainment/>} /> */}
+                
             </Switch>
         </div>
     );
