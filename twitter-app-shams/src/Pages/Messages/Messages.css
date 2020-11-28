@@ -1,0 +1,54 @@
+.messages {
+    flex: 0.5;
+    border-right:1px solid var( --twitter-background );
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+.messages__header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid var(--twitter-background );
+    padding: 0px 10px;
+}
+
+.messages__header > h2 {
+    font-size: 20px;
+    font-weight: 800;
+    
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+.messages {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.tweet_wrapper {
+    border: 1px solid var(--twitter-background);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.name {
+    margin: 5px;
+}
+
+.username {
+    margin: 5px;
+    color: rgb(194, 191, 191);
+}
+
+.tweets {
+    margin: 10px;
+}
+
+.posted_img {
+    width: 500px;
+    height: 400px;
+}

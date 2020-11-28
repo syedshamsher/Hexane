@@ -1,0 +1,26 @@
+.profile{
+    margin-top: -70px;
+    margin-left: 10px;
+
+}
+.email{
+    margin-top: -20px;
+}
+​
+.location{
+    display: flex;
+    margin-bottom: 10px;
+}
+​
+.location > * {
+    margin-right: 10px;
+}
+​
+.tweet{
+    display:flex;
+    padding: 10px;
+}
+​
+.tweet > * {
+    padding: 5px;
+}

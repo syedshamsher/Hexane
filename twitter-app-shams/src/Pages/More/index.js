@@ -1,1 +1,1 @@
-export {More} from './More'
+export { More } from "./More"
