@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-
 const links=[
     {
         to:"/explore/for-you",
@@ -28,13 +27,12 @@ const links=[
         title:"Entertainment"
     }
 ]
-
 class Navbar extends Component {
     render() {
         return (
             <div>
                 <div>
-                    <input placeholder="Search Twitter"  style={{padding: 10,width:"100%",height:"10px", borderRadius: "20px", marginBottom: 20}} />
+                    <input placeholder="Search Twitter"  style={{padding: 10,width:"95%",height:"10px", borderRadius: "20px", marginBottom: 20, }} />
                 </div>
             
                 {links.map((link)=>(
@@ -49,5 +47,4 @@ class Navbar extends Component {
         );
     }
 }
-
 export {Navbar}

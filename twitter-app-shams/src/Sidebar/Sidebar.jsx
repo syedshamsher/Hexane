@@ -21,6 +21,8 @@ import { RiFileList2Line } from "react-icons/ri"
 import { FaRegUser } from "react-icons/fa"
 import { CgMoreO } from "react-icons/cg"
 
+
+
 class Sidebar extends Component {
     render() {
         return (
@@ -28,16 +30,15 @@ class Sidebar extends Component {
               {/* Twitter icon */}
               <NavLink to="/home" exact ><FaTwitter className= "twitterLogo" /></NavLink>
               {/*  SidebarOption Components*/}
-              <NavLink to="/home" exact > <HomeOption active Icon={ BiHomeCircle } text="Home" /> </NavLink>
-              <NavLink to="/explore" exact > <ExploreOption Icon={ BiHash } text="Explore" /> </NavLink>
-              <NavLink to="/notifications" exact > <NotificationOption Icon={ IoIosNotificationsOutline } text="Notification" /> </NavLink>
-              <NavLink to="/messages" exact > <MessageOption Icon={ FiMail } text="Message" /> </NavLink>
-              <NavLink to="/bookmarks" exact > <BookmarkOption Icon={ BsBookmark } text="Bookmark" /> </NavLink>
-              <NavLink to="/lists" exact > <ListOption Icon={ RiFileList2Line } text="Lists" /> </NavLink>
-              <NavLink to="/profile" exact > <ProfileOption Icon={ FaRegUser } text="Profile" /> </NavLink>
-              <NavLink to="/more" exact > <MoreOption Icon={ CgMoreO } text="More" /> </NavLink>
+              <NavLink to="/home" exact style={{textDecoration: "none", color: "black"}}  > <HomeOption active  Icon={ BiHomeCircle } text="Home" /> </NavLink>
+              <NavLink to="/explore" exact style={{textDecoration: "none", color: "black"}}  > <ExploreOption  Icon={ BiHash } text="Explore" /> </NavLink>
+              <NavLink to="/notifications" exact style={{textDecoration: "none", color: "black"}}  > <NotificationOption  Icon={ IoIosNotificationsOutline } text="Notification" /> </NavLink>
+              <NavLink to="/messages" exact style={{textDecoration: "none", color: "black"}}  > <MessageOption  Icon={ FiMail } text="Message" /> </NavLink>
+              <NavLink to="/bookmarks" exact style={{textDecoration: "none", color: "black"}}  > <BookmarkOption  Icon={ BsBookmark } text="Bookmark" /> </NavLink>
+              <NavLink to="/lists" exact style={{textDecoration: "none", color: "black"}}  > <ListOption  Icon={ RiFileList2Line } text="Lists" /> </NavLink>
+              <NavLink to="/profile" exact style={{textDecoration: "none", color: "black"}}  > <ProfileOption  Icon={ FaRegUser } text="Profile" /> </NavLink>
+              <NavLink to="/more" exact style={{textDecoration: "none", color: "black"}} > <MoreOption  Icon={ CgMoreO } text="More" /> </NavLink>
               
-
               {/* Button for tweet */}
               <Button variant="outlined" className="btn__sidebar" fullWidth >Tweet</Button>
 

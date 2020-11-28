@@ -1,5 +1,5 @@
 .widgets {
-    flex: 0.3;
+    flex: 0.5;
     overflow-y: scroll;
     width: 500px;
     position: sticky;

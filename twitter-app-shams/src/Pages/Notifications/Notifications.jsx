@@ -1,10 +1,10 @@
 import React from 'react'
-import "./More.css"
+import "./Notifications.css"
 import { DataContext } from "../../Context/DataContextProvider";
 
   
 
-class More extends React.Component {
+class Notifications extends React.Component {
       constructor(props) {
         super(props)
         this.state = {
@@ -48,10 +48,10 @@ class More extends React.Component {
      const{ user, allUser, message, newTweet, tweeted } = this.state
      console.log( user, allUser, newTweet, tweeted )
     return (
-      <div className="more">
+      <div className="notifications">
           {/* header */}
-          <div className="more__header">
-               <h2>More</h2>
+          <div className="notifications__header">
+               <h2>Notifications</h2>
           </div>
           
           
@@ -61,5 +61,5 @@ class More extends React.Component {
    }
 }
 
-More.contextType = DataContext
-export { More }
+Notifications.contextType = DataContext
+export { Notifications }
