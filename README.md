@@ -27,4 +27,4 @@ HTML            |  CSS
 
 JAVASCRIPT             |  REACT
 :-------------------------:|:-------------------------:
-![javascript](https://user-images.githubusercontent.com/63871069/100494003-40959400-3163-11eb-9c06-5961f4397cc5.png)  |  ![react](https://user-images.githubusercontent.com/63871069/100494008-4be8bf80-3163-11eb-9249-97eb7be0b7f1.png)
+![javascript1](https://user-images.githubusercontent.com/63871069/100494359-fadaca80-3166-11eb-8fcd-5ef450e5b109.png)  |  ![react](https://user-images.githubusercontent.com/63871069/100494008-4be8bf80-3163-11eb-9249-97eb7be0b7f1.png)
